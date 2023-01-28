@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "eDev",
+    "slug": "eDev",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
