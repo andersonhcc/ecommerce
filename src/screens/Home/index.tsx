@@ -3,6 +3,7 @@ import { Box } from 'native-base';
 import { FlatList } from 'react-native';
 
 import { DetailBackground } from '../../atomic/atoms/DetailBackground';
+import { Header } from '../../atomic/molecules/Header';
 import { MainBanner } from '../../atomic/molecules';
 import { Card } from '../../atomic/molecules/Card';
 import { api } from '../../services/api';
@@ -40,8 +41,14 @@ const Home: React.FC = () => {
       position="relative"
     >
 
+
       <FlatList
-        ListHeaderComponent={() => <MainBanner /> }
+        ListHeaderComponent={() =>
+          <>
+            <Header text='Choose Your Bike'/>
+            <MainBanner />
+          </>
+        }
         data={equipments}
         showsVerticalScrollIndicator={false}
         numColumns={2}

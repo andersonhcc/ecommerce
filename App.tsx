@@ -11,9 +11,7 @@ export default function App() {
         flex={1}
         bg={theme.colors.primary[100]}
       >
-
         <Home />
-
       </Box>
     </NativeBaseProvider>
   );
