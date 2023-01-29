@@ -3,6 +3,7 @@ import { Box } from 'native-base';
 import { FlatList } from 'react-native';
 
 import { DetailBackground } from '../../atomic/atoms/DetailBackground';
+import { Categories } from '../../atomic/organism/Categories';
 import { Header } from '../../atomic/molecules/Header';
 import { MainBanner } from '../../atomic/molecules';
 import { Card } from '../../atomic/molecules/Card';
@@ -47,6 +48,7 @@ const Home: React.FC = () => {
           <>
             <Header text='Choose Your Bike'/>
             <MainBanner />
+            <Categories />
           </>
         }
         data={equipments}

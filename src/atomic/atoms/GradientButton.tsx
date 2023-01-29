@@ -1,34 +1,27 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useTheme, Box } from 'native-base';
+import { Center } from 'native-base';
+import { Gradient } from './Gradient';
 
 type Props = {
   children: React.ReactNode;
+  isGradient?: boolean;
 }
 
-const GradientButton = ({ children }: Props) => {
-  const { colors } = useTheme();
+const GradientButton = ({ children, isGradient = true }: Props) => {
 
   return (
     <TouchableOpacity>
-      <Box shadow="5">
-        <LinearGradient
-          colors={[colors.ocean[100], colors.purple[100]]}
-          style={{
-            width: 44,
-            height: 44,
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: 10
-          }}
-        >
-          {children}
-        </LinearGradient>
-      </Box>
+      <Center
+        shadow="5"
+        w="44px"
+        h="44px"
+        borderRadius="10px"
+        bg="primary.50:alpha.9">
+        {isGradient ? <Gradient>{children}</Gradient> : children}
+      </Center>
     </TouchableOpacity>
   );
-
 };
 
 export { GradientButton };
