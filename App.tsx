@@ -3,12 +3,17 @@ import { StatusBar } from 'react-native';
 import { Box, NativeBaseProvider } from 'native-base';
 import { theme } from "./src/styles/themes/index";
 
-import { Home } from './src/screens/Home';
+import { AppRoutes } from './src/routes/app.routes';
+
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
+
+const navigationTheme = DefaultTheme;
+navigationTheme.colors.background = theme.colors.primary[100];
 
 export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
-      <StatusBar 
+      <StatusBar
         barStyle='light-content'
         translucent
         backgroundColor="transparent"
@@ -17,7 +22,9 @@ export default function App() {
         flex={1}
         bg={theme.colors.primary[100]}
       >
-        <Home />
+        <NavigationContainer theme={navigationTheme}>
+          <AppRoutes />
+        </NavigationContainer>
       </Box>
     </NativeBaseProvider>
   );

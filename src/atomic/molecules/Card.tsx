@@ -1,6 +1,6 @@
 import { Box, Image, Text } from 'native-base';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, TouchableOpacityProps} from 'react-native';
 
 import { CardProps } from '../../screens/Home';
 import { TextAlpha50 } from '../atoms/TextAlpha50';
@@ -9,12 +9,14 @@ type Props = {
   data: CardProps
 }
 
-const Card = ({ data }: Props) => {
+type newProps = Props & TouchableOpacityProps;
+
+const Card = ({ data, ...rest }: newProps) => {
 
   return (
     <TouchableOpacity
       style={{ padding: 5, width: '50%', height: 240, opacity: 0.9 }}
-      onPress={() => { }}
+      {...rest}
     >
 
       <Box

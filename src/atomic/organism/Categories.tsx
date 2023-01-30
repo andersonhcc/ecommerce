@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, HStack, Text, Image } from 'native-base';
-import { GradientButton } from '../atoms/GradientButton';
+import { SquareButton } from '../atoms/SquareButton';
 
 import Bike from "../../img/categories/subtract.png";
 import Road from "../../img/categories/road.png";
@@ -15,36 +15,36 @@ const Categories: React.FC = () => {
 
 
             <Box ml="20px">
-               <GradientButton >
+               <SquareButton >
                   <Text color="white">All</Text>
-               </GradientButton>
+               </SquareButton>
             </Box>
 
             <Box ml="20px" mt="-10px">
-               <GradientButton isGradient={false}>
+               <SquareButton isGradient={false}>
                   <Image source={Bike} alt="Bike" resizeMode='contain' />
-               </GradientButton>
+               </SquareButton>
             </Box>
 
 
             <Box ml="20px" mt="-20px">
 
-               <GradientButton isGradient={false}>
+               <SquareButton isGradient={false}>
                   <Image source={Road} alt="Road" resizeMode='contain' />
-               </GradientButton>
+               </SquareButton>
             </Box>
 
             <Box ml="20px" mt="-30px">
 
-               <GradientButton isGradient={false}>
+               <SquareButton isGradient={false}>
                   <Image source={Helmet} alt="Helmet" resizeMode='contain' />
-               </GradientButton>
+               </SquareButton>
             </Box>
 
             <Box ml="20px" mt="-40px">
-               <GradientButton isGradient={false}>
+               <SquareButton isGradient={false}>
                   <Image source={Mountain} alt="Bike" resizeMode='contain' />
-               </GradientButton>
+               </SquareButton>
             </Box>
 
          </HStack>

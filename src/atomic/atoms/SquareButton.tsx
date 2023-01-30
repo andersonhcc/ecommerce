@@ -8,7 +8,7 @@ type Props = {
   isGradient?: boolean;
 }
 
-const GradientButton = ({ children, isGradient = true }: Props) => {
+const SquareButton = ({ children, isGradient = true }: Props) => {
 
   return (
     <TouchableOpacity>
@@ -24,4 +24,4 @@ const GradientButton = ({ children, isGradient = true }: Props) => {
   );
 };
 
-export { GradientButton };
+export { SquareButton };
