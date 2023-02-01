@@ -21,6 +21,7 @@ export default function App() {
       <Box
         flex={1}
         bg={theme.colors.primary[100]}
+        safeAreaTop
       >
         <NavigationContainer theme={navigationTheme}>
           <AppRoutes />
